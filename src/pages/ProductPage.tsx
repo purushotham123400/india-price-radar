@@ -74,12 +74,11 @@ const ProductPage: React.FC = () => {
                 .map(relatedProduct => (
                   <div key={relatedProduct.id} className="border border-gray-200 rounded-lg p-4 hover:border-brand-orange transition-colors">
                     <Link to={`/product/${relatedProduct.id}`} className="block">
-                      <div className="flex justify-center mb-3 h-32">
+                      <div className="flex justify-center mb-3">
                         <img 
                           src={relatedProduct.image} 
                           alt={relatedProduct.name} 
-                          className="h-full w-auto object-contain" 
-                          loading="lazy"
+                          className="h-24 w-auto object-contain" 
                         />
                       </div>
                       <h3 className="font-medium mb-1">{relatedProduct.name}</h3>

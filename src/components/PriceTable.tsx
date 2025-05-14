@@ -4,7 +4,6 @@ import { Product } from '../types';
 import RetailerIcon from './RetailerIcon';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { ExternalLink } from "lucide-react";
 
 interface PriceTableProps {
   product: Product;
@@ -52,7 +51,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ product }) => {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {sortedPrices.map((price) => (
-              <tr key={price.retailer} className={price.price === lowestPrice ? "bg-green-50" : ""}>
+              <tr key={price.retailer} className={price.price === lowestPrice ? "price-highlight" : ""}>
                 <td className="px-4 py-4">
                   <div className="flex items-center">
                     <RetailerIcon retailerId={price.retailer} size="sm" />
@@ -75,14 +74,9 @@ const PriceTable: React.FC<PriceTableProps> = ({ product }) => {
                     href={price.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center px-3 py-1 rounded-md ${price.inStock ? 'bg-brand-orange hover:bg-orange-600 text-white' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
+                    className={`inline-block px-3 py-1 rounded-md ${price.inStock ? 'bg-brand-orange hover:bg-orange-600 text-white' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}`}
                   >
-                    {price.inStock ? (
-                      <>
-                        Buy Now
-                        <ExternalLink className="ml-1" size={14} />
-                      </>
-                    ) : "Unavailable"}
+                    {price.inStock ? "Buy Now" : "Unavailable"}
                   </a>
                 </td>
               </tr>

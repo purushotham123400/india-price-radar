@@ -26,12 +26,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               {product.brand}
             </Badge>
           </div>
-          <div className="flex justify-center my-3 h-32">
+          <div className="flex justify-center my-3">
             <img 
               src={product.image} 
               alt={product.name} 
-              className="h-full w-auto object-contain" 
-              loading="lazy"
+              className="h-24 w-auto object-contain" 
             />
           </div>
           <CardTitle className="text-lg">{product.name}</CardTitle>
