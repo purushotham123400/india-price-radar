@@ -1,3 +1,4 @@
+
 import { Product, Category, Retailer, CategoryType } from "../types";
 
 export const categories: Category[] = [
@@ -151,7 +152,7 @@ export const products: Product[] = [
     name: 'Google Pixel 7 Pro 128GB',
     brand: 'Google',
     category: 'phone',
-    description: 'Google\'s best-in-class camera and pure Android experience with Google Tensor G2 chip',
+    description: 'Google's best-in-class camera and pure Android experience with Google Tensor G2 chip',
     image: 'https://via.placeholder.com/150',
     prices: [
       { retailer: 'amazon', price: 84999, inStock: true, url: 'https://amazon.in' },
