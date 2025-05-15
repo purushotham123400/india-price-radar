@@ -42,11 +42,11 @@ const ProductComparison: React.FC<ProductComparisonProps> = ({ product }) => {
             <CardTitle>Product Details</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-4 h-48">
               <img 
                 src={product.image} 
                 alt={product.name} 
-                className="h-48 w-auto object-contain" 
+                className="h-full w-auto object-contain" 
               />
             </div>
             

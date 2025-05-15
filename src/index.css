@@ -14,11 +14,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 26 87% 55%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 220 70% 23%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -34,15 +34,11 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Brand Colors */
+    --brand-blue: 214 70% 23%;
+    --brand-light: 208 100% 97%;
+    --brand-orange: 31 100% 60%;
   }
 
   .dark {
@@ -55,7 +51,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 26 87% 55%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -73,15 +69,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -89,12 +76,53 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
 }
 
-.price-highlight {
-  @apply bg-green-50 text-green-600 font-medium;
+/* Custom Styles */
+.bg-brand-blue {
+  background-color: hsl(var(--brand-blue));
 }
+
+.bg-brand-light {
+  background-color: hsl(var(--brand-light));
+}
+
+.bg-brand-orange {
+  background-color: hsl(var(--brand-orange));
+}
+
+.text-brand-blue {
+  color: hsl(var(--brand-blue));
+}
+
+.text-brand-orange {
+  color: hsl(var(--brand-orange));
+}
+
+.border-brand-blue {
+  border-color: hsl(var(--brand-blue));
+}
+
+.border-brand-orange {
+  border-color: hsl(var(--brand-orange));
+}
+
+.hover\:bg-brand-blue:hover {
+  background-color: hsl(var(--brand-blue));
+}
+
+.hover\:bg-orange-600:hover {
+  background-color: #ea580c;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+.price-highlight {
+  background-color: rgb(240, 253, 244);
+}
+
